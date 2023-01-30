@@ -40,5 +40,16 @@
             <p>Index Par!</p>
             @endif
         @endfor
+
+        @foreach ($nomes as $nome)
+            <p>{{$loop->index}}</p>
+            <p>{{$nome}}</p>
+        @endforeach
+
+        @php
+            $name = 'João';
+            echo $name;
+        @endphp
+        {{-- Aopa --}}
     </body>
 </html>
