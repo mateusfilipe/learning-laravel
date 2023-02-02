@@ -170,6 +170,10 @@ header {
     display: flex;
 }
 
+#description-container {
+    margin: 30px;
+}
+
 #info-container h3,
 #description-container h3 {
     font-size: 20px;

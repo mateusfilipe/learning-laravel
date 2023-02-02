@@ -23,66 +23,47 @@
     </head>
     <body>
         <header>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Minha Marca</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-                <a class="navbar-brand" href="/">
-                    <img src="https://raw.githubusercontent.com/matheusbattisti/curso_laravel/Aula_8/public/img/hdcevents_logo.svg" alt="HDC Events">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/events/create">Criar Eventos</a>
-                    </li>
-                    @auth
-                    <li class="nav-item">
-                      <a class="nav-link" href="/dashboard">Meus Eventos</a>
-                    </li> 
-                    <li class="nav-item">
-                      <form action="/logout" method="POST">
-                        @csrf
-                        <a class="nav-link" href="/logout" 
-                        onclick="event.preventDefault(); 
-                                 this.closest('form').submit();">
-                        Logout
-                      </a>
-                      </form>
-                    </li> 
-                    @endauth
-                    @guest
-                    <li class="nav-item">
-                      <a class="nav-link" href="/login">Entrar</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/register">Cadastrar</a>
-                    </li>
-                    @endguest
-                  </ul>
-                </div>
-              </nav>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light ml-auto" id="navbar">
+              <a class="navbar-brand" href="/">
+                  <img src="https://raw.githubusercontent.com/matheusbattisti/curso_laravel/Aula_8/public/img/hdcevents_logo.svg" alt="HDC Events">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Eventos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/events/create">Criar Eventos</a>
+                  </li>
+                  @auth
+                  <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Meus Eventos</a>
+                  </li> 
+                  <li class="nav-item">
+                    <form action="/logout" method="POST">
+                      @csrf
+                      <a class="nav-link" href="/logout" 
+                      onclick="event.preventDefault(); 
+                                this.closest('form').submit();">
+                      Logout
+                    </a>
+                    </form>
+                  </li> 
+                  @endauth
+                  @guest
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Entrar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/register">Cadastrar</a>
+                  </li>
+                  @endguest
+                </ul>
+              </div>
+            </nav>
         </header>
     <main>
       <div class="">
